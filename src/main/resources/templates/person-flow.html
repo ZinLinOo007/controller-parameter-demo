@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <link rel="stylesheet" href="../static/bootstrap/css/bootstrap.min.css"
+  th:href="@{/bootstrap/css/bootstrap.min.css}">
+</head>
+<body>
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <div class="card-header">
+        <h3>Person Form</h3>
+      </div>
+      <div class="card-body">
+        <form action="#" th:action="@{/person/step2}" th:object=${person} method="post">
+          <div class="form-group">
+            <label for="name" class="form-control">Name</label>
+            <input type="text" id="name" class="form-control" th:field="*{name}">
+          </div>
+
+          <div class="form-group">
+            <label for="age" class="form-control">Age</label>
+            <input type="text" id="age" class="form-control" th:field="*{age}">
+          </div>
+
+          <div class="form-group">
+            <label for="school" class="form-control">School</label>
+            <input type="text" id="school" class="form-control" th:field="*{school}">
+          </div>
+
+          <input type="submit" value="Next" class="btn btn-primary">
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>
